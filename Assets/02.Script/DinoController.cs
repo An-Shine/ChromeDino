@@ -26,26 +26,19 @@ public class DinoController : MonoBehaviour
     
     void Update()
     {
-       if(Input.GetKeyDown(KeyCode.Space)&&isGrounded)
-        {
-            anim.SetBool("isGround", false);
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            isGrounded = false;
-        }
-       if(Input.GetKeyUp(KeyCode.Space))
-        {
-            anim.SetBool("isGround", true);
-        }
+        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, 0.2f, whatIsGround);
 
+        //이제 스페이스바 누르면 점프 애니메이션 실행
+
+        if (Input.GetKeyDown(KeyCode.Space)&&isGrounded.Equals(true))
+        {           
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);            
+        }
+        anim.SetBool("isGround", isGrounded);
 
     }
-   /* void OnCollisionEnter2D(Collision2D collision)
-    {
-        // 땅과 충돌했는지 체크
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true; // 땅에 닿았을 때
-        }
-    }
-   */
+   
 }
+  /*Physics2D.OverLapCircle(groundCheckPoint, 반경, whatIsGround) > 지정된 원의 중심과 반경내에있는 2d콜라이더를 감지하는데사용 
+   
+   */
