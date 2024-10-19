@@ -19,7 +19,7 @@ public class ObstacleController : MonoBehaviour
 
     }
 
-    private void OnBecameInvisible()
+    private void OnBecameInvisible() // 카메라밖으로나가면 보이게해주는 함수
     {
         Destroy(gameObject);
     }
