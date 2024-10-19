@@ -83,6 +83,11 @@ public class DinoController : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheckPoint.position, 0.2f);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("뭔가 충돌했어!!");
+    }
+
 }
   /*Physics2D.OverLapCircle(groundCheckPoint, 반경, whatIsGround) > 지정된 원의 중심과 반경내에있는 2d콜라이더를 감지하는데사용 
    
