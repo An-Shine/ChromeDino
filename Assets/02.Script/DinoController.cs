@@ -85,7 +85,15 @@ public class DinoController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("¹º°¡ Ãæµ¹Çß¾î!!");
+        if(collision.CompareTag("Obstacle"))
+        {
+            Debug.Log("°ÔÀÓ ¿À¹ö");
+        }
+
+        else if (collision.CompareTag("Point"))
+        {
+            Debug.Log("Á¡¼ö È¹µæ");
+        }
     }
 
 }
