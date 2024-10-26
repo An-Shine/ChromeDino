@@ -88,6 +88,7 @@ public class DinoController : MonoBehaviour
         if(collision.CompareTag("Obstacle"))
         {
             Gamemanager.instance.Gameover();
+            anim.SetTrigger("isDie"); //죽는 애니메이션 실행
         }
 
         else if (collision.CompareTag("Point"))

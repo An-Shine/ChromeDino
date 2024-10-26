@@ -109,10 +109,14 @@ public class Gamemanager : MonoBehaviour
         bestScore_Text.text = "최고점수 : " + PlayerPrefs.GetInt("최고점수").ToString(); //베스트점수는 저장되어있던 베스트점수를 문자로 불러옴
         endScore_Text.text = "최종점수 : " + mainScore.ToString(); // 마지막점수는 MainScore 점수를 문자화 해서 넣어줌
       gameOver_Panell.SetActive(true);
+
+
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        Time.timeScale = 1f; //게임 시간을 다시 흐르게함
+        SceneManager.LoadScene("GameScene");
+        
     }
 }

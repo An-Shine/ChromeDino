@@ -423,7 +423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC810\uC218 : 0"
+  m_text: "\uC810\uC218 : 10"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cd3e9095aa07cf468187a6e0677c980, type: 2}
   m_sharedMaterial: {fileID: -7715548808243457980, guid: 9cd3e9095aa07cf468187a6e0677c980, type: 2}
@@ -1777,19 +1777,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2051459817}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1865164774}
-        m_TargetAssemblyTypeName: Gamemanager, Assembly-CSharp
-        m_MethodName: RestartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2051459817
 MonoBehaviour:
   m_ObjectHideFlags: 0
