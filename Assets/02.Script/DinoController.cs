@@ -87,12 +87,12 @@ public class DinoController : MonoBehaviour
     {
         if(collision.CompareTag("Obstacle"))
         {
-            Debug.Log("°ÔÀÓ ¿À¹ö");
+            Gamemanager.instance.Gameover();
         }
 
         else if (collision.CompareTag("Point"))
         {
-            Debug.Log("Á¡¼ö È¹µæ");
+            Gamemanager.instance.Score_UI_Update();
         }
     }
 
