@@ -100,6 +100,7 @@ public class Gamemanager : MonoBehaviour
     }
     public void Gameover()
     {
+        GetComponent<AudioSource>().Play();
         Time.timeScale = 0f; //게임의 시간을 멈춤
         if(mainScore > PlayerPrefs.GetInt("최고점수", 0)) // 현재 점수가 저장되어있던 베스트점수(없다면 기본0)보다 높다면
         {

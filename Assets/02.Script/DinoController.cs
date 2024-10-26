@@ -37,7 +37,8 @@ public class DinoController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space)&&isGrounded.Equals(true))
         {           
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);            
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            GetComponent<AudioSource>().Play();
         }
         
         if (Input.GetKeyDown(KeyCode.DownArrow)&& isGrounded.Equals(true))
